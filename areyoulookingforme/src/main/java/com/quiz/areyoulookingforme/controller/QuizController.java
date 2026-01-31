@@ -4,6 +4,8 @@ import com.quiz.areyoulookingforme.model.Question;
 import com.quiz.areyoulookingforme.service.QuizService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
@@ -23,4 +25,5 @@ public class QuizController {
         return quizService.loadQuestions();
     }
 }
+
 
