@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "text": "When you think about your ideal QA candidate, what do you expect them to do when testing starts?",
+    "answers": [
+      { "text": "Follow instructions exactly, no questions asked", "score": 1 },
+      { "text": "Execute test cases as written", "score": 2 },
+      { "text": "Look for issues and report them clearly", "score": 3 },
+      { "text": "Understand the product, challenge assumptions, and protect quality", "score": 4 }
+    ]
+  }
+]
