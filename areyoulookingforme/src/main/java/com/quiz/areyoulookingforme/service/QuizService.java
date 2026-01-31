@@ -11,13 +11,20 @@ import java.util.List;
 @Service
 public class QuizService {
 
-    public List<Question> getQuestions() {
+    private final ObjectMapper objectMapper = new ObjectMapper();
+
+    public List<Question> loadQuestions() {
         try {
-            ObjectMapper mapper = new ObjectMapper();
-            InputStream is = getClass().getResourceAsStream("/questions.json");
-            return mapper.readValue(is, new TypeReference<List<Question>>() {});
+            InputStream is = getClass()
+                .getResourceAsStream("/questions.json");
+
+            return objectMapper.readValue(
+                is,
+                new TypeReference<List<Question>>() {}
+            );
         } catch (Exception e) {
             throw new RuntimeException("Failed to load questions", e);
         }
     }
 }
+
