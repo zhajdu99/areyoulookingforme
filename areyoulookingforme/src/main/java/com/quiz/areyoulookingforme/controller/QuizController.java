@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
+@CrossOrigin
 public class QuizController {
 
     private final QuizService quizService;
@@ -16,8 +18,9 @@ public class QuizController {
         this.quizService = quizService;
     }
 
-    @GetMapping("/api/questions")
+    @GetMapping("/questions")
     public List<Question> getQuestions() {
-        return quizService.getQuestions();
+        return quizService.loadQuestions();
     }
 }
+
